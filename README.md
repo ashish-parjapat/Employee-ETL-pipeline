@@ -15,24 +15,3 @@ Key Features:
 🟨 Gold Layer: Aggregated, business-ready data curated for analytical consumption and reporting.
 
 📊 Extensibility: Can be connected to BI tools like Power BI or Tableau for dashboards (not included in this version).
-
-Folder Structure:
-
-bash
-Copy
-Edit
-├── notebooks/
-│   ├── 1_bronze_ingestion.py
-│   ├── 2_silver_transformation.py
-│   └── 3_gold_aggregation.py
-├── configs/
-│   └── mount_adls.py  # Uses secrets from Key Vault for mounting ADLS
-├── data/
-│   └── (sample employee data)
-└── README.md
-📄 Resume Bullet Points:
-Developed an end-to-end ETL pipeline in Databricks using Medallion Architecture to process employee data across Bronze, Silver, and Gold layers with Delta Lake.
-
-Implemented secure data lake access using Azure App Registration and Key Vault to mount ADLS Gen2 on DBFS.
-
-Optimized PySpark workflows for data cleaning, transformation, and aggregation, enabling scalable and modular data processing.
