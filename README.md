@@ -1,19 +1,53 @@
+# 🔷 Scalable ETL Pipeline on Azure Databricks (Medallion Architecture)
 
-# Employee ETL Pipeline using Medallion Architecture (Bronze, Silver, Gold Layers)
+## 🧰 Tech Stack
+- **Azure Data Lake Storage Gen2**
+- **Azure Key Vault**
+- **Azure App Registration**
+- **Azure Databricks**
+- **PySpark**
+- **Delta Lake**
 
-Tech Stack: Azure Data Lake Storage Gen2, Azure Key Vault, Azure App Registration, Azure Databricks, PySpark, Delta Lake
+---
 
-Overview:
-This project implements a scalable ETL pipeline on Azure Databricks following the Medallion Architecture (Bronze-Silver-Gold layers). It ingests employee data and processes it through multiple layers, applying data cleaning, transformation, and enrichment at each stage.
+## 📖 Overview
 
-Key Features:
+This project implements a **scalable ETL pipeline** using **Azure Databricks** and follows the **Medallion Architecture** pattern (Bronze → Silver → Gold layers). It ingests and processes **employee data**, applying data quality checks, transformations, and enrichment at each stage.
 
-🔐 Secure Integration: Used Azure App Registration and Key Vault to securely connect ADLS Gen2 with Databricks File System (DBFS). This ensures secure access to storage without embedding secrets.
+---
 
-🟫 Bronze Layer: Raw data ingestion from ADLS into Databricks using Delta format, preserving original data for traceability.
+## ✨ Key Features
 
-🟪 Silver Layer: Cleaned and transformed data with schema enforcement and deduplication using PySpark.
+### 🔐 Secure Integration
+- Uses **Azure App Registration** and **Azure Key Vault** to securely mount **ADLS Gen2** to **Databricks File System (DBFS)**.
+- Secrets are stored securely and not hardcoded into notebooks or scripts.
 
-🟨 Gold Layer: Aggregated, business-ready data curated for analytical consumption and reporting.
+### 🟫 Bronze Layer
+- Raw data ingestion in **Delta Lake format**.
+- Stores unprocessed data for traceability and auditing.
 
-📊 Extensibility: Can be connected to BI tools like Power BI or Tableau for dashboards (not included in this version).
+### 🟪 Silver Layer
+- Applies **data cleaning, schema enforcement**, and **deduplication** using **PySpark**.
+- Provides structured and quality-assured data.
+
+### 🟨 Gold Layer
+- Aggregates and enriches data for **business-level insights**.
+- Ready for consumption by analytics or BI tools.
+
+---
+
+## 📊 Extensibility
+
+While this version focuses on the data engineering pipeline, it can be extended by integrating with BI tools such as **Power BI** or **Tableau** for dashboarding and reporting.
+
+---
+
+## 📁 Folder Structure
+```bash
+├── notebooks/
+│   ├── 01_bronze_ingestion.py
+│   ├── 02_silver_transformation.py
+│   └── 03_gold_aggregation.py
+├── configs/
+│   └── secrets_config.json
+├── README.md
