@@ -19,7 +19,7 @@ This project implements a **scalable ETL pipeline** using **Azure Databricks** a
 
 ## 🏗️ Architecture
 
-![ETL Architecture](/architecture.png)
+![ETL Architecture](/Architecture.png)
 
 This diagram illustrates the Medallion Architecture flow across Bronze, Silver, and Gold layers using Azure Databricks and Delta Lake, with secure connectivity via Key Vault and App Registration.
 
