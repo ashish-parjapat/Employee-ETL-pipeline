@@ -1,4 +1,6 @@
-Employee ETL Pipeline using Medallion Architecture (Bronze, Silver, Gold Layers)
+
+# Employee ETL Pipeline using Medallion Architecture (Bronze, Silver, Gold Layers)
+
 Tech Stack: Azure Data Lake Storage Gen2, Azure Key Vault, Azure App Registration, Azure Databricks, PySpark, Delta Lake
 
 Overview:
